@@ -23,7 +23,7 @@
 }
 
 
-div#fp-nav {
+#fp-nav {
 	background-color: rgba(255, 255, 255, 0.34);
 	width: 60px;
 	padding: 15px;
@@ -32,6 +32,16 @@ div#fp-nav {
 	height: 100%;
 	top: 0;
 	margin-top:0 !important; 
+	transition: background-color 0.3s ease;
+}
+
+#fp-nav:hover {
+	background-color: rgba(255, 255, 255, 0.7);
+	transition: background-color 0.3s ease;
+}
+
+#fp-nav:hover + .fb-btn {
+	opacity:0.9;
 }
 
 .fb-btn {
@@ -42,6 +52,7 @@ div#fp-nav {
 	height: 40px;
 	margin: 10px;
 	opacity:0.4;
+	transition: opacity 0.3s ease;
 }
 
 .fb-btn:hover {
