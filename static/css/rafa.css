@@ -1,0 +1,49 @@
+#myVideo{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top:20;
+	right:0;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	background-color: black; /* in case the video doesn't fit the whole page*/
+	background-image: /* our video */;
+	background-position: center center;
+	background-size: contain;
+	object-fit: cover; /*cover video background */
+	z-index:3;
+}
+
+
+
+#slide1 {
+	background: url('../img/hi_res_test.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+
+div#fp-nav {
+	background-color: rgba(255, 255, 255, 0.34);
+	width: 60px;
+	padding: 15px;
+	left:0;
+	margin-left:-17px;
+	height: 100%;
+	top: 0;
+	margin-top:0 !important; 
+}
+
+.fb-btn {
+	position: fixed;
+	z-index: 1000;
+	bottom: 0;
+	left: 0;
+	height: 40px;
+	margin: 10px;
+	opacity:0.4;
+}
+
+.fb-btn:hover {
+	opacity:1;
+}

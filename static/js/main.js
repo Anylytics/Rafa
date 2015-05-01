@@ -26,4 +26,4 @@ require.config({
 });
 
 
-require(["template"]);
+require(["template","fullpage-config"]);
