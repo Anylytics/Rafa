@@ -1,8 +1,13 @@
+body {
+	background-color:#01503d;
+	overflow:hidden;
+}
+
 #myVideo{
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	top:20;
+	top:0;
 	right:0;
 	width: 100%;
 	height: 100%;
@@ -11,14 +16,26 @@
 	background-image: /* our video */;
 	background-position: center center;
 	background-size: contain;
-	object-fit: cover; /*cover video background */
+	object-fit: cover;
 	z-index:3;
 }
 
-
-
 #slide1 {
 	background: url('../img/hi_res_test.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+#slide3 {
+	background: url('../img/french-open.png');
+	background-size: cover;
+	transition: background-position 0.8s ease-in-out;
+	-o-transition: background-position 0.8s ease-in-out;
+	-moz-transition: background-position 0.8s ease-in-out;
+	-webkit-transition: background-position 0.8s ease-in-out;
+}
+
+#slide5 {
+	background: url('../img/nadal.jpg');
 	background-size: cover;
 }
 
@@ -35,13 +52,16 @@
 	transition: background-color 0.3s ease;
 }
 
+#fp-nav > ul {
+	padding-top:60px;
+}
+
 #fp-nav:hover {
 	background-color: rgba(255, 255, 255, 0.7);
 	transition: background-color 0.3s ease;
-}
-
-#fp-nav:hover + .fb-btn {
-	opacity:0.9;
+	-o-transition: background-color 0.3s ease;
+	-moz-transition: background-color 0.3s ease;
+	-webkit-transition: background-color 0.3s ease;
 }
 
 .fb-btn {
@@ -51,10 +71,167 @@
 	left: 0;
 	height: 40px;
 	margin: 10px;
-	opacity:0.4;
+	opacity:0.6;
 	transition: opacity 0.3s ease;
 }
 
-.fb-btn:hover {
+.any-btn {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	height: 60px;
+	margin: 0;
+	transition: height 0.2s ease, margin 0.2s ease;
+}
+
+.any-btn:hover {
+	height:100px;
+	margin:-20px;
+}
+
+.fb-btn:hover, .any-btn:hover {
 	opacity:1;
+}
+
+.fp-tooltip {
+	background-image: url("../img/black.png");
+	padding:5px;
+	font-size:1.2em;
+}
+
+#fp-nav ul li a span {
+	background: #01503d;
+}
+
+#nadal-stats {
+	color: black;
+	list-style: none;
+	width: 25%;
+	min-width:250px;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 20px;
+	position: absolute;
+	right: 50px;
+	top: 100px;
+}
+
+#nadal-stats > ul {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.title-box {
+	position:absolute;
+	top:40%;
+	left: 100px;
+	background-image:  url("../img/black.png");
+	padding: 0 20px 15px 20px;
+}
+
+.title-box-grid {
+	background-image:  url("../img/black.png");
+	padding: 0 20px 15px 20px;
+}
+
+.hover-box {
+	border-style:solid;
+	border-width:5px;
+	position:absolute;
+	border-color:white;
+	opacity:0.7;
+	transition: background-color 0.3s ease, border-width 0.2s ease,  border-color 0.5s ease;
+	-o-transition: background-color 0.3s ease, border-width 0.2s ease,  border-color 0.5s ease;
+	-moz-transition: background-color 0.3s ease, border-width 0.2s ease,  border-color 0.5s ease;
+	-webkit-transition: background-color 0.3s ease, border-width 0.2s ease,  border-color 0.5s ease;
+}
+
+.hover-box:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-width:2px;
+	border-color:#01503d;
+	transition: background-color 0.3s ease, border-width 0.2s ease,  border-color 0.5s ease;
+	-o-transition: background-color 0.3s ease, border-width 0.2s ease,  border-color 0.5s ease;
+	-moz-transition: background-color 0.3s ease, border-width 0.2s ease,  border-color 0.5s ease;
+	-webkit-transition: background-color 0.3s ease, border-width 0.2s ease,  border-color 0.5s ease;
+	cursor:pointer;
+}
+
+#nadal-head {
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+	-moz-animation-duration: 0.5s;
+	
+	animation-delay: 0.25s;
+	-webkit-animation-delay: 0.25s;
+	-moz-animation-delay: 0.25s;
+}
+
+#nadal-forearm {
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+	-moz-animation-duration: 0.5s;
+	
+	animation-delay: 0.4s;
+	-webkit-animation-delay: 0.4s;
+	-moz-animation-delay: 0.4s;
+}
+
+#nadal-lefty {
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+	-moz-animation-duration: 0.5s;
+	
+	animation-delay: 0.55s;
+	-webkit-animation-delay: 0.55s;
+	-moz-animation-delay:  0.55s;
+}
+
+#nadal-mobile {
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+	-moz-animation-duration: 0.5s;
+	
+	animation-delay: 0.7s;
+	-webkit-animation-delay: 0.7s;
+	-moz-animation-delay:  0.7s;
+}
+
+
+
+/****** BOOTSTRAP OVERRIDES *****/
+
+.modal-content {
+	border-radius:0;
+}
+
+
+.modal-header {
+	background-color:#01503d;
+	cursor: move;
+}
+
+.modal-header > button {
+	color:white;
+}
+
+.modal-header > button:hover {
+	color:white;
+}
+
+.modal-title {
+	color:white;
+}
+
+
+/****** TIMELINE.JS OVERRIDES *****/
+
+.vco-storyjs, .storyjs-embed {
+	background-color:transparent !important;
+	background-image: url("../img/white.png");
+}
+
+.french-open-container {
+	padding: 50px 50px 50px 110px;
 }

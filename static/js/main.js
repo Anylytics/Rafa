@@ -9,8 +9,13 @@ require.config({
         jqueryui: 'lib/jquery_ui',
         fullpage: 'lib/jquery.fullPage.min',
         slimscroll: 'lib/jquery.slimscroll.min',
+        responseimg: 'lib/jquery.rwdImageMaps.min',
         csv2geojson: 'lib/csv2geojson',
-        omnivore: 'lib/leaflet-omnivore.min'
+        omnivore: 'lib/leaflet-omnivore.min',
+		bootstrap: 'bootstrap/bootstrap.min',
+		nadal: 'nadal',
+		frenchopen: 'french-open',
+		timeline: 'lib/timeline/js/storyjs-embed'
     },
     shim: {
     	"fullpage": {
@@ -21,9 +26,18 @@ require.config({
     	},
     	'omnivore': {
     		deps: [ "csv2geojson" ]
-    	}
+    	}, 
+		'fullpage-config': {
+			deps: [ "jquery", "jqueryui", "nadal", "frenchopen", "template", "timeline" ]
+		}/*,
+		'nadal': {
+			deps: ["jquery", "jqueryui" ]
+		},
+		'frenchopen': {
+			deps: ["jquery", "timeline"]
+		}*/
     }
 });
 
 
-require(["template","fullpage-config"]);
+require(["template", "fullpage-config"]);

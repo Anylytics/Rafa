@@ -7,23 +7,39 @@
 /******* FONTS ********/
 
 @font-face {
- font-family: 'SourceSans';
- src: url("../fonts/SourceSansPro-Bold.otf") format("opentype");
+	font-family: 'SourceSans';
+	src: url("../fonts/SourceSansPro-Bold.otf") format("opentype");
 }
 
 @font-face {
- font-family: 'Andada-Italic';
- src: url("../fonts/Andada-Italic.otf") format("opentype");
+	font-family: 'Andada-Italic';
+	src: url("../fonts/Andada-Italic.otf") format("opentype");
 }
 
 @font-face {
- font-family: 'Andada-Regular';
- src: url("../fonts/Andada-Regular.otf") format("opentype");
+	font-family: 'Andada-Regular';
+	src: url("../fonts/Andada-Regular.otf") format("opentype");
 }
 
 @font-face {
- font-family: 'Andada-Bold';
- src: url("../fonts/Andada-Bold.otf") format("opentype");
+	font-family: 'Andada-Bold';
+	src: url("../fonts/Andada-Bold.otf") format("opentype");
+}
+
+.andadaItalic {
+	font-family: 'Andada-Italic';
+}
+
+.andadaRegular {
+	font-family: 'Andada-Regular';
+}
+
+.andadaBold {
+	font-family: 'Andada-Bold';
+}
+
+.sourceSans {
+	font-family: 'SourceSans';
 }
 
 /******* TYPOGRAPHY ********/

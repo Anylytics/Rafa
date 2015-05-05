@@ -1,0 +1,47 @@
+
+@media screen and (max-width: 768px) {
+	
+	#nadal-stats {
+		bottom:25px;
+		right:25px;
+		top:auto;
+	}
+	
+	.title-box {
+		left:auto;
+		top:auto;
+		bottom:10px;
+		right:0;
+	}
+	
+	.title-box-grid {
+		margin: 0 50px 0 100px;
+	}
+	
+	#slide3 {
+		background: url('../img/french-open.png') no-repeat center center;
+		background-size: cover;
+		transition: background-position 0.8s ease;
+		-o-transition: background-position 0.8s ease;
+		-moz-transition: background-position 0.8s ease;
+		-webkit-transition: background-position 0.8s ease;
+	}
+	
+	.vco-navigation {
+		display:none;
+	}
+	
+	.french-open-container {
+		padding: 10px 10px 10px 70px;
+		bottom:0;
+	}
+	
+	#french-open-timeline, .slider-container-mask, .slider-item, .nav-next, .nav-previous {
+		height:390px !important;
+	}
+	
+	.storyjs-embed .full-embed {
+		height:390px;
+	}
+	
+}
