@@ -29,10 +29,10 @@ require.config({
     	}, 
 		'fullpage-config': {
 			deps: [ "jquery", "jqueryui", "nadal", "frenchopen", "template", "timeline" ]
-		}/*,
+		},
 		'nadal': {
 			deps: ["jquery", "jqueryui" ]
-		},
+		}/*,
 		'frenchopen': {
 			deps: ["jquery", "timeline"]
 		}*/

@@ -21,6 +21,22 @@ define([ 'ractive', 'rv!../ractive/template', 'fullpage', 'mapbox', 'omnivore'],
 	map.scrollWheelZoom.disable();
 
 	omnivore.csv('./static/data/data.csv').addTo(map);
+	
+	$(document).ready(function() {
+		
+		var wid = $( "#pixel-canvas" ).width();
+		var hei = $( "#pixel-canvas" ).height();
+		
+		var x = Math.floor(wid/40);
+		var y = Math.floor(hei/40);
+		
+		console.log("x:" + x + " y:" + y);
+		
+		for (var i = 0; i < x*y; i++) {
+			$( "#pixel-canvas" ).append( "<div class='pixel'></div>" );
+		}
+		
+	});
 
     return sampleRactive;
 

@@ -1,5 +1,5 @@
 // Now we've configured RequireJS, we can load our dependencies and start
-define([ 'ractive', 'rv!../ractive/nadal', 'bootstrap', 'jquery','jqueryui'], function ( Ractive, html, bootstrap, $, jqueryui) {
+define([ 'ractive', 'rv!../ractive/nadal', 'jquery','jqueryui', 'bootstrap'], function ( Ractive, html, $, jqueryui, bootstrap) {
 
 
 	var nadalRactive = new Ractive({

@@ -25,6 +25,37 @@ body {
 	background-size: cover;
 }
 
+#mapslide {
+	background: url('../img/world_map.png') no-repeat 50% 50%;
+	background-size:cover;
+}
+
+.pixel {
+	height:30px;
+	width:30px;
+	margin:4px;
+	background-color:whitesmoke;
+	display:inline-block;
+}
+
+.pixel:hover {
+	height:32px;
+	width:32px;
+	margin:3px;
+}
+
+#pixel-canvas {
+	margin:100px 100px 100px 160px;
+	position:absolute;
+	padding:4px;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background-color:black;
+	overflow:hidden;
+}
+
 #slide3 {
 	background: url('../img/french-open.png');
 	background-size: cover;
