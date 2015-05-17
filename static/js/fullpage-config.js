@@ -1,4 +1,4 @@
-define(['jquery', 'fullpage', 'bootstrap', 'jqueryui' ], function ($, fullpage, bootstrap, jqueryui) {
+define(['jquery', 'fullpage', 'bootstrap', 'jqueryui', 'nadal', 'template', 'french-open' ], function ($, fullpage, bootstrap, jqueryui, nadal, template, frenchopen) {
 	
 		
 	$(document).ready(function() {

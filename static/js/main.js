@@ -13,9 +13,11 @@ require.config({
         csv2geojson: 'lib/csv2geojson',
         omnivore: 'lib/leaflet-omnivore.min',
 		bootstrap: 'bootstrap/bootstrap.min',
+        timeline: 'lib/timeline/js/storyjs-embed'
+        /*
 		nadal: 'nadal',
-		frenchopen: 'french-open',
-		timeline: 'lib/timeline/js/storyjs-embed'
+		frenchopen: 'french-open',*/
+		
     },
     shim: {
     	"fullpage": {
@@ -26,13 +28,13 @@ require.config({
     	},
     	'omnivore': {
     		deps: [ "csv2geojson" ]
-    	}, 
+    	}/*, 
 		'fullpage-config': {
 			deps: [ "jquery", "jqueryui", "nadal", "frenchopen", "template", "timeline" ]
 		},
 		'nadal': {
 			deps: ["jquery", "jqueryui" ]
-		}/*,
+		},
 		'frenchopen': {
 			deps: ["jquery", "timeline"]
 		}*/
