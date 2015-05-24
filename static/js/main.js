@@ -12,8 +12,10 @@ require.config({
         responseimg: 'lib/jquery.rwdImageMaps.min',
         csv2geojson: 'lib/csv2geojson',
         omnivore: 'lib/leaflet-omnivore.min',
+        chart: 'lib/chart.min',
 		bootstrap: 'bootstrap/bootstrap.min',
-		nadal: 'nadal',
+        nadal: 'nadal',
+        versus: 'versus',
 		frenchopen: 'french-open',
 		winners: 'winners',
 		timeline: 'lib/timeline/js/storyjs-embed',
@@ -48,5 +50,5 @@ require.config({
 });
 
 
-require(["template", "fullpage-config", "loader"]);
+require(["template", "fullpage-config", "loader", "versus", "chart"]);
 
