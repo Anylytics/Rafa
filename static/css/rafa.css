@@ -2,13 +2,14 @@
 
 Stylesheet for rafael nadal project
 
-Theme color: #01503d (French Open Green)
+Theme color: 		#01503d (French Open Green)
+Anylytics Green: 	#54A148
 
 */
 
 
 body {
-	background-color:#01503d;
+	background-color:#54A148;
 	overflow:hidden;
 }
 
@@ -129,7 +130,7 @@ body {
 }
 
 #fp-nav:hover {
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: white;
 	transition: background-color 0.3s ease;
 	-o-transition: background-color 0.3s ease;
 	-moz-transition: background-color 0.3s ease;
@@ -186,6 +187,15 @@ body {
 	position: absolute;
 	right: 50px;
 	top: 100px;
+}
+
+#slide1-box {
+	width:auto;
+	height:auto;
+	padding:20px;
+	position:absolute;
+	right:100px;
+	top:100px;
 }
 
 #nadal-stats > ul {
