@@ -1,5 +1,5 @@
 define(['jquery', 'fullpage', 'bootstrap', 'jqueryui' ], function ($, fullpage, bootstrap, jqueryui) {
-	
+
 		
 	$(document).ready(function() {
 	    $('#fullpage').fullpage({
@@ -8,6 +8,9 @@ define(['jquery', 'fullpage', 'bootstrap', 'jqueryui' ], function ($, fullpage, 
 			'responsive':1,
 			'navigation': true,
 			'navigationPosition': 'left',
+			'normalScrollElements': '#slide4',
+			'touchSensitivity': 10,
+			'menu':true,
 			'navigationTooltips': ['Title', 'Grand Slams', 'French Open', 'Winners','Nadal','A Champion Arises','And Falls','From the Ashes','Statistics','Can He Win?'],
 			afterLoad: function(anchorLink, index){
 				var loadedSection = $(this);

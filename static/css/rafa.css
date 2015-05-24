@@ -1,6 +1,47 @@
+/*
+
+Stylesheet for rafael nadal project
+
+Theme color: #01503d (French Open Green)
+
+*/
+
+
 body {
 	background-color:#01503d;
 	overflow:hidden;
+}
+
+.absolute {
+	position:absolute;
+}
+
+.white {
+	color:white;
+}
+
+.black {
+	color:black;
+}
+
+.bottom {
+	bottom:0;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+
+.right {
+	right:0;
+	text-align:right;
+}
+
+.left {
+	left:0;
+	text-align:left;
+}
+
+.top {
+	top:0;
 }
 
 #myVideo{
@@ -57,7 +98,7 @@ body {
 }
 
 #slide3 {
-	background: url('../img/french-open.png');
+	background: url('../img/french-open.jpg');
 	background-size: cover;
 	transition: background-position 0.8s ease-in-out;
 	-o-transition: background-position 0.8s ease-in-out;
@@ -229,6 +270,10 @@ body {
 	-moz-animation-delay:  0.7s;
 }
 
+.slide-title {
+	text-align:center;
+	padding:25px;
+}
 
 
 /****** BOOTSTRAP OVERRIDES *****/
@@ -265,4 +310,193 @@ body {
 
 .french-open-container {
 	padding: 50px 50px 50px 110px;
+}
+
+
+/******** Loading animation  *******/
+/* From https://github.com/tobiasahlin/SpinKit */
+
+
+#loading-screen {
+	background-color:white;
+	opacity:1;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:100000;
+}
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/******* LOADING ANIMATION ********/
+/* http://projects.lukehaas.me/css-loaders/ */
+.loader {
+	font-size: 90px;
+	text-indent: -9999em;
+	overflow: hidden;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	margin:auto;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	position: absolute;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation: load6 1.7s infinite ease;
+	animation: load6 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.087em -0.825em 0 -0.42em #54A148, -0.173em -0.812em 0 -0.44em #54A148, -0.256em -0.789em 0 -0.46em #54A148, -0.297em -0.775em 0 -0.477em #54A148;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.338em -0.758em 0 -0.42em #54A148, -0.555em -0.617em 0 -0.44em #54A148, -0.671em -0.488em 0 -0.46em #54A148, -0.749em -0.34em 0 -0.477em #54A148;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.377em -0.74em 0 -0.42em #54A148, -0.645em -0.522em 0 -0.44em #54A148, -0.775em -0.297em 0 -0.46em #54A148, -0.82em -0.09em 0 -0.477em #54A148;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+}
+@keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.087em -0.825em 0 -0.42em #54A148, -0.173em -0.812em 0 -0.44em #54A148, -0.256em -0.789em 0 -0.46em #54A148, -0.297em -0.775em 0 -0.477em #54A148;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.338em -0.758em 0 -0.42em #54A148, -0.555em -0.617em 0 -0.44em #54A148, -0.671em -0.488em 0 -0.46em #54A148, -0.749em -0.34em 0 -0.477em #54A148;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.377em -0.74em 0 -0.42em #54A148, -0.645em -0.522em 0 -0.44em #54A148, -0.775em -0.297em 0 -0.46em #54A148, -0.82em -0.09em 0 -0.477em #54A148;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+}
+
+
+/******** YEARBOOK WINNERS STYLES *****/
+
+#slide4 {
+	background-color:rgb(16, 16, 16);
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+.card {
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	/*border-style:solid;
+	border-color:#01503d;
+	border-width:3px;*/
+}
+
+.front, .back {
+	padding: 10px;
+	border-radius:50%;
+}
+.front {
+	background-color: #ccc;
+}
+
+.year-label {
+	position: absolute;
+	bottom: -15px;
+	text-align: center;
+	width: 120px;
+	left: -10px;
+	height: 25px;
+	font-size:1.1em;
+}
+
+.year-label > img {
+	width:120px;
+	position: fixed;
+	z-index: -1;
+	left: -10px;
+}
+
+.back {
+	background-color: #fff;
+}
+
+.offset-60 {
+	padding-left:60px;
 }

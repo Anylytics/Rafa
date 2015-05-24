@@ -37,6 +37,10 @@ define([ 'ractive', 'rv!../ractive/template', 'fullpage', 'mapbox', 'omnivore'],
 		}
 		
 	});
+	
+	
+
+
 
     return sampleRactive;
 

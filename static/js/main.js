@@ -15,7 +15,9 @@ require.config({
 		bootstrap: 'bootstrap/bootstrap.min',
 		nadal: 'nadal',
 		frenchopen: 'french-open',
-		timeline: 'lib/timeline/js/storyjs-embed'
+		winners: 'winners',
+		timeline: 'lib/timeline/js/storyjs-embed',
+		flip: 'lib/flip'
     },
     shim: {
     	"fullpage": {
@@ -24,14 +26,20 @@ require.config({
     	'slimscroll': {
     		deps: [ "jquery" ]
     	},
+		'bootstrap': {
+			deps: [ "jquery" ]
+		},
     	'omnivore': {
     		deps: [ "csv2geojson" ]
     	}, 
 		'fullpage-config': {
-			deps: [ "jquery", "jqueryui", "nadal", "frenchopen", "template", "timeline" ]
+			deps: [ "jquery", "jqueryui", "nadal", "frenchopen", "template", "winners", "timeline", "flip" ]
 		},
 		'nadal': {
 			deps: ["jquery", "jqueryui" ]
+		},
+		'flip': {
+			deps: ["jquery"]
 		}/*,
 		'frenchopen': {
 			deps: ["jquery", "timeline"]
@@ -40,4 +48,5 @@ require.config({
 });
 
 
-require(["template", "fullpage-config"]);
+require(["template", "fullpage-config", "loader"]);
+
