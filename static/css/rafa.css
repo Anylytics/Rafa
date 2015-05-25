@@ -289,7 +289,12 @@ body {
 
 #slide6 {
 	text-align:center;
-	background-color:black;
+	background-color:#d6d6d6;
+	color: #222222 !important;
+}
+
+#slide6 h2 {
+	color: #222222 !important;
 }
 
 .stat-btn {
@@ -299,7 +304,7 @@ body {
   margin:20px;
   border-radius: 50%;
   /* border-radius: 50%; */
-  background-color: aliceblue;
+  background-color: #222222;
   display: inline-block;
 }
 
@@ -318,7 +323,7 @@ body {
 	width:50px;
 	//border-radius:50%;
 	font-size:1.2em;
-	background-color:white;
+	background-color:#222222;
 	color:#565656;
 	//background-image: url("../img/white.png");
 	cursor:pointer;
@@ -327,17 +332,48 @@ body {
 #versus-container {
 	padding-top:30px;
 	padding-bottom:30px;
-}
-
-#vs-versus {
 	font-size:6em;
-	color:white;
 }
 
+.vs-input input[type="text"] {
+  padding: 10px;
+  border: none;
+  text-align:center;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  color:black;
+}
+.vs-input input[type="text"]:focus,
+.vs-input input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+}
 .vs-box {
 	height:100px;
 	width:100px;
 	border-radius:50%;
+}
+
+#stats-box {
+	margin-top:15px;
+	margin-bottom:15px;
+	font-size:1.7em;
+}
+
+.leftBar {
+  display: inline-block;
+  z-index: 10;
+  position: absolute;
+  left: 0px;
+  background-color: white;
+}
+
+.rightBar {
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  right: 0px;
+  background-color: grey;
 }
 
 /****** BOOTSTRAP OVERRIDES *****/

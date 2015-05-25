@@ -56,5 +56,11 @@
 		height:200px;
 		width:200px;
 	}
+
+	#versus-container {
+		padding-top:10px;
+		padding-bottom:10px;
+		font-size:3em;
+	}
 	
 }
