@@ -335,6 +335,10 @@ body {
 	font-size:6em;
 }
 
+.scores-row {
+	font-size:.2em;
+}
+
 .vs-input input[type="text"] {
   padding: 10px;
   border: none;

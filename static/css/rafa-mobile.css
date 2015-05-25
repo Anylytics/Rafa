@@ -62,5 +62,9 @@
 		padding-bottom:10px;
 		font-size:3em;
 	}
+
+	.scores-row {
+		font-size:.4em;
+	}
 	
 }
