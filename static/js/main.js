@@ -19,7 +19,8 @@ require.config({
 		frenchopen: 'french-open',
 		winners: 'winners',
 		timeline: 'lib/timeline/js/storyjs-embed',
-		flip: 'lib/flip'
+		flip: 'lib/flip',
+        autocomplete: 'lib/jquery.autocomplete'
     },
     shim: {
     	"fullpage": {
@@ -35,6 +36,9 @@ require.config({
     		deps: [ "csv2geojson" ]
     	},
         'flip': {
+            deps: ["jquery"]
+        },
+        'autocomplete': {
             deps: ["jquery"]
         }/*, 
 		'fullpage-config': {
@@ -54,5 +58,5 @@ require.config({
 });
 
 
-require(["template", "fullpage-config", "loader", "versus", "chart"]);
+require(["template", "fullpage-config", "loader", "versus", "chart", "winners"]);
 
