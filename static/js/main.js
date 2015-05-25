@@ -12,12 +12,14 @@ require.config({
         responseimg: 'lib/jquery.rwdImageMaps.min',
         csv2geojson: 'lib/csv2geojson',
         omnivore: 'lib/leaflet-omnivore.min',
+        chart: 'lib/chart.min',
 		bootstrap: 'bootstrap/bootstrap.min',
-        timeline: 'lib/timeline/js/storyjs-embed'
-        /*
-		nadal: 'nadal',
-		frenchopen: 'french-open',*/
-		
+        nadal: 'nadal',
+        versus: 'versus',
+		frenchopen: 'french-open',
+		winners: 'winners',
+		timeline: 'lib/timeline/js/storyjs-embed',
+		flip: 'lib/flip'
     },
     shim: {
     	"fullpage": {
@@ -26,15 +28,25 @@ require.config({
     	'slimscroll': {
     		deps: [ "jquery" ]
     	},
+		'bootstrap': {
+			deps: [ "jquery" ]
+		},
     	'omnivore': {
     		deps: [ "csv2geojson" ]
-    	}/*, 
+    	},
+        'flip': {
+            deps: ["jquery"]
+        }/*, 
 		'fullpage-config': {
-			deps: [ "jquery", "jqueryui", "nadal", "frenchopen", "template", "timeline" ]
+			deps: [ "jquery", "jqueryui", "nadal", "frenchopen", "template", "winners", "timeline", "flip" ]
 		},
 		'nadal': {
 			deps: ["jquery", "jqueryui" ]
 		},
+<<<<<<< HEAD
+=======
+		/*,
+>>>>>>> 62ccecfbc3e02ea33b89227ff88f7b96cc8677a2
 		'frenchopen': {
 			deps: ["jquery", "timeline"]
 		}*/
@@ -42,4 +54,5 @@ require.config({
 });
 
 
-require(["template", "fullpage-config"]);
+require(["template", "fullpage-config", "loader", "versus", "chart"]);
+

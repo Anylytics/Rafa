@@ -1,6 +1,48 @@
+/*
+
+Stylesheet for rafael nadal project
+
+Theme color: 		#01503d (French Open Green)
+Anylytics Green: 	#54A148
+
+*/
+
+
 body {
-	background-color:#01503d;
+	background-color:#54A148;
 	overflow:hidden;
+}
+
+.absolute {
+	position:absolute;
+}
+
+.white {
+	color:white;
+}
+
+.black {
+	color:black;
+}
+
+.bottom {
+	bottom:0;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+
+.right {
+	right:0;
+	text-align:right;
+}
+
+.left {
+	left:0;
+	text-align:left;
+}
+
+.top {
+	top:0;
 }
 
 #myVideo{
@@ -57,7 +99,7 @@ body {
 }
 
 #slide3 {
-	background: url('../img/french-open.png');
+	background: url('../img/french-open.jpg');
 	background-size: cover;
 	transition: background-position 0.8s ease-in-out;
 	-o-transition: background-position 0.8s ease-in-out;
@@ -88,7 +130,7 @@ body {
 }
 
 #fp-nav:hover {
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: white;
 	transition: background-color 0.3s ease;
 	-o-transition: background-color 0.3s ease;
 	-moz-transition: background-color 0.3s ease;
@@ -145,6 +187,15 @@ body {
 	position: absolute;
 	right: 50px;
 	top: 100px;
+}
+
+#slide1-box {
+	width:auto;
+	height:auto;
+	padding:20px;
+	position:absolute;
+	right:100px;
+	top:100px;
 }
 
 #nadal-stats > ul {
@@ -229,7 +280,101 @@ body {
 	-moz-animation-delay:  0.7s;
 }
 
+.slide-title {
+	text-align:center;
+	padding:25px;
+}
 
+/***** VERSUS SLIDE ****/
+
+#slide6 {
+	text-align:center;
+	background-color:#d6d6d6;
+	color: #222222 !important;
+}
+
+#slide6 h2 {
+	color: #222222 !important;
+}
+
+.stat-btn {
+  width: 100px;
+  height: 100px;
+  padding:10px;
+  margin:20px;
+  border-radius: 50%;
+  /* border-radius: 50%; */
+  background-color: #222222;
+  display: inline-block;
+}
+
+#round-picker {
+	top:20px;
+	left:0;
+	right:0;
+	margin:auto;
+}
+
+.round-btn {
+	padding:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	height:50px;
+	width:50px;
+	//border-radius:50%;
+	font-size:1.2em;
+	background-color:#222222;
+	color:#565656;
+	//background-image: url("../img/white.png");
+	cursor:pointer;
+}
+
+#versus-container {
+	padding-top:30px;
+	padding-bottom:30px;
+	font-size:6em;
+}
+
+.vs-input input[type="text"] {
+  padding: 10px;
+  border: none;
+  text-align:center;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  color:black;
+}
+.vs-input input[type="text"]:focus,
+.vs-input input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+}
+.vs-box {
+	height:100px;
+	width:100px;
+	border-radius:50%;
+}
+
+#stats-box {
+	margin-top:15px;
+	margin-bottom:15px;
+	font-size:1.7em;
+}
+
+.leftBar {
+  display: inline-block;
+  z-index: 10;
+  position: absolute;
+  left: 0px;
+  background-color: white;
+}
+
+.rightBar {
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  right: 0px;
+  background-color: grey;
+}
 
 /****** BOOTSTRAP OVERRIDES *****/
 
@@ -265,4 +410,228 @@ body {
 
 .french-open-container {
 	padding: 50px 50px 50px 110px;
+}
+
+
+/******** Loading animation  *******/
+/* From https://github.com/tobiasahlin/SpinKit */
+
+
+#loading-screen {
+	background-color:white;
+	opacity:1;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:100000;
+}
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/******* LOADING ANIMATION ********/
+/* http://projects.lukehaas.me/css-loaders/ */
+.loader {
+	font-size: 90px;
+	text-indent: -9999em;
+	overflow: hidden;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	margin:auto;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	position: absolute;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation: load6 1.7s infinite ease;
+	animation: load6 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.087em -0.825em 0 -0.42em #54A148, -0.173em -0.812em 0 -0.44em #54A148, -0.256em -0.789em 0 -0.46em #54A148, -0.297em -0.775em 0 -0.477em #54A148;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.338em -0.758em 0 -0.42em #54A148, -0.555em -0.617em 0 -0.44em #54A148, -0.671em -0.488em 0 -0.46em #54A148, -0.749em -0.34em 0 -0.477em #54A148;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.377em -0.74em 0 -0.42em #54A148, -0.645em -0.522em 0 -0.44em #54A148, -0.775em -0.297em 0 -0.46em #54A148, -0.82em -0.09em 0 -0.477em #54A148;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+}
+@keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.087em -0.825em 0 -0.42em #54A148, -0.173em -0.812em 0 -0.44em #54A148, -0.256em -0.789em 0 -0.46em #54A148, -0.297em -0.775em 0 -0.477em #54A148;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.338em -0.758em 0 -0.42em #54A148, -0.555em -0.617em 0 -0.44em #54A148, -0.671em -0.488em 0 -0.46em #54A148, -0.749em -0.34em 0 -0.477em #54A148;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, -0.377em -0.74em 0 -0.42em #54A148, -0.645em -0.522em 0 -0.44em #54A148, -0.775em -0.297em 0 -0.46em #54A148, -0.82em -0.09em 0 -0.477em #54A148;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em #54A148, 0 -0.83em 0 -0.42em #54A148, 0 -0.83em 0 -0.44em #54A148, 0 -0.83em 0 -0.46em #54A148, 0 -0.83em 0 -0.477em #54A148;
+  }
+}
+
+
+/******** YEARBOOK WINNERS STYLES *****/
+
+#slide4 {
+	background-color:rgb(16, 16, 16);
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+.card {
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	/*border-style:solid;
+	border-color:#01503d;
+	border-width:3px;*/
+}
+
+.front, .back {
+	padding: 10px;
+	border-radius:50%;
+}
+.front {
+	background-color: #ccc;
+}
+
+.year-label {
+	position: absolute;
+	bottom: -15px;
+	text-align: center;
+	width: 120px;
+	left: -10px;
+	height: 25px;
+	font-size:1.1em;
+}
+
+.year-label > img {
+	width:120px;
+	position: fixed;
+	z-index: -1;
+	left: -10px;
+}
+
+.back {
+	background-color: #fff;
+}
+
+.offset-60 {
+	padding-left:60px;
+}
+
+
+/***** HOVER.CSS https://github.com/IanLunn/Hover ****/
+
+/* Outline Out */
+.hvr-outline-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+.hvr-outline-out:before {
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 4px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+.hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
 }

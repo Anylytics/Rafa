@@ -42,6 +42,41 @@
 	font-family: 'SourceSans';
 }
 
+
+/****** LOGO LOADING *******/
+
+#svg-any-logo { 
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	width:90px;
+	height:90px;
+	margin:auto;
+	/*-webkit-animation-delay: 0.4s;
+	-moz-animation-delay: 0.4s;
+	-ms-animation-delay: 0.4s;
+	-o-animation-delay: 0.4s;
+	animation-delay: 0.4s;*/
+	-webkit-animation-duration: 0.3s;
+	-moz-animation-duration: 0.3s;
+	-ms-animation-duration: 0.3s;
+	-o-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+}
+
+#full-any-logo {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	width:200px;
+	margin:auto;
+	display:none;
+}
+
 /******* TYPOGRAPHY ********/
 
 h1, h2, h3, h4, h5, h6 {

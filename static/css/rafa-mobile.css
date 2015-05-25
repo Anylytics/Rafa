@@ -43,5 +43,24 @@
 	.storyjs-embed .full-embed {
 		height:390px;
 	}
+
+	#slide1-box {
+		padding:0;
+		position:absolute;
+		right:0;
+		bottom:20px;
+		margin:auto;
+	}
+
+	#slide1-box > img {
+		height:200px;
+		width:200px;
+	}
+
+	#versus-container {
+		padding-top:10px;
+		padding-bottom:10px;
+		font-size:3em;
+	}
 	
 }

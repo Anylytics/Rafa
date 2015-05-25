@@ -1,8 +1,7 @@
 // Now we've configured RequireJS, we can load our dependencies and start
 define([ 'ractive', 'rv!../ractive/template', 'fullpage', 'mapbox', 'omnivore'], function ( Ractive, html, fullpage, mapbox, omnivore) {
 
-
-    var sampleRactive = new Ractive({
+   var sampleRactive = new Ractive({
       el: 'ractiveDiv',
       template: html,
       data: {
@@ -37,6 +36,10 @@ define([ 'ractive', 'rv!../ractive/template', 'fullpage', 'mapbox', 'omnivore'],
 		}
 		
 	});
+	
+	
+
+
 
     return sampleRactive;
 
