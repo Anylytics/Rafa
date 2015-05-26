@@ -330,26 +330,78 @@ body {
 }
 
 #versus-container {
-	padding-top:30px;
-	padding-bottom:30px;
-	font-size:6em;
+ 	padding-top: 100px;
+	padding-bottom:10px;
+	font-size:5em;
 }
 
 .scores-row {
-	font-size:.2em;
+	font-size:.3em;
 }
 
-.vs-input input[type="text"] {
-  padding: 10px;
-  border: none;
-  text-align:center;
-  border-bottom: solid 2px #c9c9c9;
-  transition: border 0.3s;
-  color:black;
+#nadal-background {
+	z-index:0;
+	position:absolute;
+	width: calc( 50% - 30px );
+	height:100%;
+	background-color:#fec401;
 }
-.vs-input input[type="text"]:focus,
-.vs-input input[type="text"].focus {
-  border-bottom: solid 2px #969696;
+
+#opponent-background {
+	z-index:0;
+	position:absolute;
+	width: calc( 50% - 30px );
+	right:0;
+	height:100%;
+}
+
+#slide6-title {
+	z-index:10;
+	position:absolute;
+	margin-left:auto;
+	margin-right:auto;
+	left:60px;
+	right:0;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(192, 192, 192, 0.40);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(192, 192, 192, 0.40);  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(192, 192, 192, 0.40);  
+}
+
+:-ms-input-placeholder {  
+   color: rgba(192, 192, 192, 0.40);  
+}
+
+.record-overall {
+	font-size:1.7em;
+}
+
+input[type=text] {
+    float: right;
+    border: 2px solid rgba(192,192,192,0.40);
+    padding: 8px 0;
+    background-color: rgba(0,0,0,0);
+    outline:none;
+    border-width: 0 0 2px 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform:uppercase;
+    margin-top: 15px;
+    padding-top: 0;
+    margin-top: 0;
+    text-align:center;
+    transition: border-color .3s;
+  }
 }
 .vs-box {
 	height:100px;
@@ -373,11 +425,43 @@ body {
 
 .rightBar {
   display: inline-block;
-  width: 100%;
   position: absolute;
   z-index: 9;
   right: 0px;
-  background-color: grey;
+  background-color: darkcyan;
+}
+
+.autocomplete-suggestions { 
+	font-family: 'SourceSans';
+	text-transform: uppercase;
+	font-size:1.5em;
+	border: 1px solid #999; 
+	background: #FFF; 
+	overflow: hidden; 
+}
+
+.autocomplete-suggestion { 
+	padding: 2px 5px; 
+	white-space: nowrap; 
+	overflow: hidden; 
+}
+
+.autocomplete-selected { 
+	background: #F0F0F0; 
+}
+
+.autocomplete-suggestions strong { 
+	font-weight: normal; 
+	color: #54A148; 
+}
+
+.autocomplete-group { 
+	padding: 2px 5px; 
+}
+
+.autocomplete-group strong { 
+	display: block; 
+	border-bottom: 1px solid #000; 
 }
 
 /****** BOOTSTRAP OVERRIDES *****/
