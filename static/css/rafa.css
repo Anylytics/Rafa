@@ -291,6 +291,7 @@ body {
 	text-align:center;
 	background-color:#d6d6d6;
 	color: #222222 !important;
+	overflow:hidden;
 }
 
 #slide6 h2 {
@@ -401,7 +402,10 @@ input[type=text] {
     margin-top: 0;
     text-align:center;
     transition: border-color .3s;
-  }
+  	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
 }
 .vs-box {
 	height:100px;

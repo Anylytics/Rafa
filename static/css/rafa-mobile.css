@@ -66,5 +66,14 @@
 	.scores-row {
 		font-size:.4em;
 	}
+
+	#stats-box {
+		margin-top:0;
+		margin-bottom:35px;
+	}
+
+	.record-overall {
+		text-align:center;
+	}
 	
 }
