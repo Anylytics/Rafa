@@ -3,6 +3,11 @@ define([ 'ractive', 'rv!../ractive/versus', 'jquery', 'bootstrap', 'autocomplete
 
 	var versusRactive = new Ractive({
 	  el: 'slide6',
+	  data: {
+        aces: 50,
+        df: 50,
+        FstWin: 50
+      },
 	  template: html
 	});
 
@@ -251,20 +256,17 @@ define([ 'ractive', 'rv!../ractive/versus', 'jquery', 'bootstrap', 'autocomplete
 	        url: "./versus/"+suggestion.value,
 	        dataTye: "json",
 	        success: function(json) {
-	            //crimeIndexRactive.set("crimeIndex", json["crimeRatingYear"][5]);
-	            //var indexRatio = json["crimeRatingYear_night"][5] / (json["crimeRatingYear_day"][5] + json["crimeRatingYear_night"][5]) * 100;
-	            //crimeIndexRactive.set("indexRatio", indexRatio);
+	            // Calculate Ace Percentage
+	            versusRactive.set("aces", json["r_aces"]/(json["r_aces"]+json["o_aces"]) * 100);
+	            versusRactive.set("df", json["r_df"]/(json["r_df"]+json["o_df"]) * 100);
+	            //Rafa First Serve Win
+	            rafa_fs = json["r_1stWon"] / json["r_1stIn"];
+	            //Opponent First Serve Win
+	            opp_fs = json["o_1stWon"] / json["o_1stIn"];
+	            versusRactive.set("FstWin", rafa_fs / (rafa_fs + opp_fs) * 100);
 
 
-	            /*summaryRactive.set("summary", json["crimeRatingYear"]);
-	            summaryRactive.set("day", json["crimeRatingYear_day"]);
-	            summaryRactive.set("night", json["crimeRatingYear_night"]);
-
-	            object["index"] = json["crimeRatingYear"][5];
-	            var isSame = recentSearchesRactive.get("hasSearch")(object);
-	            if (isSame == false) 
-	            	recentSearchesRactive.unshift('searches', object);
-	            */
+	            console.log(versusRactive.get("aces"));
 	            console.log(json);
 	            
 

@@ -56,6 +56,23 @@ def find_crimes(opponent):
 		features['o_1stWon'] = features['o_1stWon'] + int(row[10])
 		features['o_2ndWon'] = features['o_2ndWon'] + int(row[11])
 
+	for row in c.execute('SELECT w_ace, w_df, w_svpt, w_1stIn, w_1stWon, w_2ndWon, l_ace, l_df, l_svpt, l_1stIn, l_1stWon, l_2ndWon FROM matches where ( winner_name == ? )', [opponent]):
+		features['o_aces'] = features['o_aces'] + int(row[0])
+		features['o_df'] = features['o_df'] + int(row[1])
+		features['o_svpt'] = features['o_svpt'] + int(row[2])
+		features['o_1stIn'] = features['o_1stIn'] + int(row[3])
+		features['o_1stWon'] = features['o_1stWon'] + int(row[4])
+		features['o_2ndWon'] = features['o_2ndWon'] + int(row[5])
+
+		features['r_aces'] = features['r_aces'] + int(row[6])
+		features['r_df'] = features['r_df'] + int(row[7])
+		features['r_svpt'] = features['r_svpt'] + int(row[8])
+		features['r_1stIn'] = features['r_1stIn'] + int(row[9])
+		features['r_1stWon'] = features['r_1stWon'] + int(row[10])
+		features['r_2ndWon'] = features['r_2ndWon'] + int(row[11])
+
+		
+
 	return jsonify(features)
 	
 
