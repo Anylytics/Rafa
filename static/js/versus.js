@@ -244,7 +244,33 @@ define([ 'ractive', 'rv!../ractive/versus', 'jquery', 'bootstrap', 'autocomplete
  ];
 
 	$('#autocomplete').autocomplete({
-	    lookup: opponents
+	    lookup: opponents,
+	    onSelect: function (suggestion) {
+	       //console.log(suggestion.value);
+	       $.ajax({
+	        url: "./versus/"+suggestion.value,
+	        dataTye: "json",
+	        success: function(json) {
+	            //crimeIndexRactive.set("crimeIndex", json["crimeRatingYear"][5]);
+	            //var indexRatio = json["crimeRatingYear_night"][5] / (json["crimeRatingYear_day"][5] + json["crimeRatingYear_night"][5]) * 100;
+	            //crimeIndexRactive.set("indexRatio", indexRatio);
+
+
+	            /*summaryRactive.set("summary", json["crimeRatingYear"]);
+	            summaryRactive.set("day", json["crimeRatingYear_day"]);
+	            summaryRactive.set("night", json["crimeRatingYear_night"]);
+
+	            object["index"] = json["crimeRatingYear"][5];
+	            var isSame = recentSearchesRactive.get("hasSearch")(object);
+	            if (isSame == false) 
+	            	recentSearchesRactive.unshift('searches', object);
+	            */
+	            console.log(json);
+	            
+
+	        	}
+	    	});
+		}
 	});
 	
     return versusRactive;
