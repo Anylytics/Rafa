@@ -17,26 +17,53 @@
 	</div>
 </div>-->
 
-<h2>How does he compare?</h2>
+<div id="nadal-background"></div>
+<div id="opponent-background" style="background-color:#d30016;"></div> <!--TODO: PROGRAM THIS DYNAMICALLY -->
+
+<h2 id="slide6-title">MATCHUPS</h2>
 
 <div id="versus-container" class="container">
 	<div class="row">
-		<div id="vs-nadal-img" 			class="col-sm-4">	RAFAEL		</div>
-		<div id="vs-versus" 			class="col-sm-4">	VS 			</div>
-		<div class="vs-input"			class="col-sm-4">	<input type="text" name="opponents" id="autocomplete">	</div>
+		<div id="vs-nadal-img" 			class="col-xs-5">	NADAL		</div>
+		<div id="vs-versus" 			class="col-xs-2">	VS 			</div>
+		<div class="vs-input"			class="col-xs-5">	<input type="text" name="opponents" id="autocomplete" placeholder="OPPONENT">	</div>
+	</div>
+	<div class="row scores-row">
+		<div class="col-sm-4 hidden-xs">			</div>
+		<div class="col-sm-2 right record-overall">	OVERALL	</div>
+		<div class="col-sm-2 left  record-overall">	23-1	</div>
+		<div class="col-sm-4 hidden-xs">			</div>
+	</div>
+	<div class="row scores-row">
+		<div class="col-xs-4">			</div>
+		<div class="col-xs-2 right">	<span style="color:#8da639;">Grass</span>	</div>
+		<div class="col-xs-2 left ">	23-1	</div>
+		<div class="col-xs-4">			</div>
+	</div>
+	<div class="row scores-row">
+		<div class="col-xs-4">			</div>
+		<div class="col-xs-2 right">	<span style="color:#b15035;">Clay</span>	</div>
+		<div class="col-xs-2 left ">	23-1	</div>
+		<div class="col-xs-4">			</div>
+	</div>
+	<div class="row scores-row">
+		<div class="col-xs-4">			</div>
+		<div class="col-xs-2 right">	<span style="color:#719c80;">Hard</span>	</div>
+		<div class="col-xs-2 left ">	23-1	</div>
+		<div class="col-xs-4">			</div>
 	</div>
 </div>
 
 <div id="stats-container" class="container">
-			<h2>STATS</h2>
+			<h2 class="hidden-xs">STATS</h2>
 	<div id="stats-box" class="row">
 		<div class="col-md-3 right">
 			<div>ACES</div>
 		</div>
 		<div class="col-md-6">
-			<div class="leftBar" style="width=10%;">29</div><div class="rightBar">30</div>
+			<div class="leftBar" style="width: 40%;">29</div><div class="rightBar" style="width: 60%;">30</div>
 		</div>
-		<div class="col-md-3 left">
+		<div class="col-md-3 leftt hidden-xs">
 			<div>ACES</div>
 		</div>
 	</div>
@@ -45,9 +72,9 @@
 			<div>DOUBLE FAULTS</div>
 		</div>
 		<div class="col-md-6">
-			<div class="leftBar" style="width=50%;">29</div><div class="rightBar">30</div>
+			<div class="leftBar" style="width: 50%;">29</div><div class="rightBar" style="width: 50%;">30</div>
 		</div>
-		<div class="col-md-3 left">
+		<div class="col-md-3 leftt hidden-xs">
 			<div>DOUBLE FAULTS</div>
 		</div>
 	</div>
@@ -56,9 +83,9 @@
 			<div>FIRST SERVE WIN %</div>
 		</div>
 		<div class="col-md-6">
-			<div class="leftBar" style="width=30%;">29</div><div class="rightBar">30</div>
+			<div class="leftBar" style="width: 30%;">29</div><div class="rightBar" style="width: 70%;">30</div>
 		</div>
-		<div class="col-md-3 left">
+		<div class="col-md-3 left hidden-xs">
 			<div>FIRST SERVE WIN %</div>
 		</div>
 	</div>
@@ -66,8 +93,9 @@
 
 
 
-
+<!--
 			<div>DOUBLE FAULTS</div>
 			<div>FIRST SERVE WIN %</div>
 			<div>SECOND SERVE WIN %</div>
 			<div>BREAK POINTS SAVED</div>
+-->

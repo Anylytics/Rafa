@@ -58,9 +58,22 @@
 	}
 
 	#versus-container {
-		padding-top:10px;
+		padding-top:100px;
 		padding-bottom:10px;
 		font-size:3em;
+	}
+
+	.scores-row {
+		font-size:.4em;
+	}
+
+	#stats-box {
+		margin-top:0;
+		margin-bottom:35px;
+	}
+
+	.record-overall {
+		text-align:center;
 	}
 	
 }
