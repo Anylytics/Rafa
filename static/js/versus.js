@@ -4,11 +4,60 @@ define([ 'ractive', 'rv!../ractive/versus', 'jquery', 'bootstrap', 'autocomplete
 	var versusRactive = new Ractive({
 	  el: 'slide6',
 	  data: {
-        aces: 50,
-        df: 50,
-        FstWin: 50
+	  	opponent: "",
+	  	surface: "Overall",
+        aces: [50, 50],
+        df: [50, 50],
+        FstWin: [50, 50],
+        SndWin: [50, 50],
+        rWins: {'Overall': 0, 'Clay' : 0, 'Carpet': 0, 'Hard': 0, 'Grass': 0},
+        oWins: {'Overall': 0, 'Clay' : 0, 'Carpet': 0, 'Hard': 0, 'Grass': 0},
+        nonzero: function(value) {
+        	if (value > 0) 
+        		return value;
+        },
+        getPercentage: function(data) {
+        	return data[0] / (data[0]+data[1]) * 100;
+        }
       },
 	  template: html
+	});
+
+	function refreshData(opponent, surface)
+	{
+		$.ajax({
+	        url: "./versus/"+opponent+"/"+surface,
+	        dataTye: "json",
+	        success: function(json) {
+	            // Calculate Ace Percentage
+	            versusRactive.set("aces", [json["r_aces"], json["o_aces"]] );
+
+	            versusRactive.set("df", [ json["r_df"], json["o_df"] ]);
+	            //Rafa First Serve Win
+	            rafa_fs = Math.round(json["r_1stWon"] / json["r_1stIn"] * 100);
+	            //Opponent First Serve Win
+	            opp_fs = Math.round(json["o_1stWon"] / json["o_1stIn"] * 100);
+	            versusRactive.set("FstWin", [ rafa_fs , opp_fs ] );
+
+	            //Rafa Second Serve Win
+	            rafa_ss = Math.round(json["r_2ndWon"] / (json["r_svpt"] - json["r_1stIn"] - json["r_df"]) * 100);
+	            //Opponent Second Serve Win
+	            opp_ss = Math.round(json["o_2ndWon"] / (json["o_svpt"] - json["o_1stIn"] - json["o_df"]) * 100);
+	            versusRactive.set("SndWin", [ rafa_ss , opp_ss ] );
+
+	            versusRactive.set("rWins", json["r_win"]);
+	            versusRactive.set("oWins", json["o_win"]);
+
+	            console.log(json);
+	            
+
+	        }
+	    });
+	}
+
+	versusRactive.on( 'changeSurface', function( event, object )  {
+		versusRactive.set("surface", object);
+		refreshData(versusRactive.get("opponent"), versusRactive.get("surface"));
 	});
 
 	var opponents = ['Gianni Mina',
@@ -252,26 +301,8 @@ define([ 'ractive', 'rv!../ractive/versus', 'jquery', 'bootstrap', 'autocomplete
 	    lookup: opponents,
 	    onSelect: function (suggestion) {
 	       //console.log(suggestion.value);
-	       $.ajax({
-	        url: "./versus/"+suggestion.value,
-	        dataTye: "json",
-	        success: function(json) {
-	            // Calculate Ace Percentage
-	            versusRactive.set("aces", json["r_aces"]/(json["r_aces"]+json["o_aces"]) * 100);
-	            versusRactive.set("df", json["r_df"]/(json["r_df"]+json["o_df"]) * 100);
-	            //Rafa First Serve Win
-	            rafa_fs = json["r_1stWon"] / json["r_1stIn"];
-	            //Opponent First Serve Win
-	            opp_fs = json["o_1stWon"] / json["o_1stIn"];
-	            versusRactive.set("FstWin", rafa_fs / (rafa_fs + opp_fs) * 100);
-
-
-	            console.log(versusRactive.get("aces"));
-	            console.log(json);
-	            
-
-	        	}
-	    	});
+	       versusRactive.set("opponent", suggestion.value);
+	       refreshData(versusRactive.get("opponent"), versusRactive.get("surface"));
 		}
 	});
 
