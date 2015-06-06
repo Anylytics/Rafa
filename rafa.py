@@ -58,7 +58,7 @@ def find_crimes(opponent, surface):
 
 	
 	for row in search_db(opponent):
-		print row
+		#print row
 		if ",".join(row).find(',,') == -1:
 			if surface == 'Overall' or row[12] == surface:
 				features['r_aces'] = features['r_aces'] + int(row[0])

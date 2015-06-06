@@ -338,6 +338,12 @@ body {
 
 .scores-row {
 	font-size:.3em;
+	cursor:pointer;
+  	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 #nadal-background {
@@ -419,12 +425,21 @@ input[type=text] {
 	font-size:1.7em;
 }
 
+#parent-versus-container {
+	background-image:url("../img/white.png");
+}
+
 .leftBar {
   display: inline-block;
   z-index: 10;
   position: absolute;
   left: 0px;
-  background-color: white;
+  background-color: #d30016;//white;
+  	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .rightBar {
@@ -432,7 +447,16 @@ input[type=text] {
   position: absolute;
   z-index: 9;
   right: 0px;
-  background-color: darkcyan;
+  background-color: #fec401;//darkcyan;
+  	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.scoresRowActive {
+	font-size:0.4em;
 }
 
 .autocomplete-suggestions { 

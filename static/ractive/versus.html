@@ -22,37 +22,38 @@
 
 <h2 id="slide6-title">MATCHUPS</h2>
 
+<div id="parent-versus-container">
 <div id="versus-container" class="container">
 	<div class="row">
 		<div id="vs-nadal-img" 			class="col-xs-5">	NADAL		</div>
 		<div id="vs-versus" 			class="col-xs-2">	VS 			</div>
 		<div class="vs-input"			class="col-xs-5">	<input type="text" name="opponents" id="autocomplete" placeholder="OPPONENT">	</div>
 	</div>
-	<div class="row scores-row" on-click="changeSurface:Overall">
+	<div class="row scores-row {{ (surface=='Overall') ? 'scoresRowActive' : '' }}" on-click="changeSurface:Overall">
 		<div class="col-sm-4 hidden-xs">			</div>
 		<div class="col-sm-2 right record-overall">	OVERALL	</div>
 		<div class="col-sm-2 left  record-overall">	{{rWins['Overall']}}-{{oWins['Overall']}}	</div>
 		<div class="col-sm-4 hidden-xs">			</div>
 	</div>
-	<div class="row scores-row" on-click="changeSurface:Grass">
+	<div class="row scores-row {{ (surface=='Grass') ? 'scoresRowActive' : '' }}" on-click="changeSurface:Grass">
 		<div class="col-xs-4">			</div>
 		<div class="col-xs-2 right">	<span style="color:#8da639;">Grass</span>	</div>
 		<div class="col-xs-2 left ">	{{rWins['Grass']}}-{{oWins['Grass']}}	</div>
 		<div class="col-xs-4">			</div>
 	</div>
-	<div class="row scores-row" on-click="changeSurface:Clay">
+	<div class="row scores-row {{ (surface=='Clay') ? 'scoresRowActive' : '' }}" on-click="changeSurface:Clay">
 		<div class="col-xs-4">			</div>
 		<div class="col-xs-2 right">	<span style="color:#b15035;">Clay</span>	</div>
 		<div class="col-xs-2 left ">	{{rWins['Clay']}}-{{oWins['Clay']}}	</div>
 		<div class="col-xs-4">			</div>
 	</div>
-	<div class="row scores-row" on-click="changeSurface:Hard">
+	<div class="row scores-row {{ (surface=='Hard') ? 'scoresRowActive' : '' }}" on-click="changeSurface:Hard">
 		<div class="col-xs-4">			</div>
 		<div class="col-xs-2 right">	<span style="color:#719c80;">Hard</span>	</div>
 		<div class="col-xs-2 left ">	{{rWins['Hard']}}-{{oWins['Hard']}}	</div>
 		<div class="col-xs-4">			</div>
 	</div>
-	<div class="row scores-row" on-click="changeSurface:Carpet">
+	<div class="row scores-row {{ (surface=='Carpet') ? 'scoresRowActive' : '' }}" on-click="changeSurface:Carpet">
 		<div class="col-xs-4">			</div>
 		<div class="col-xs-2 right">	<span style="color:#719c80;">Carpet</span>	</div>
 		<div class="col-xs-2 left ">	{{rWins['Carpet']}}-{{oWins['Carpet']}}	</div>
@@ -69,7 +70,7 @@
 		<div class="col-md-6">
 			<div class="leftBar" style="width: {{getPercentage(aces)}}%;">{{ nonzero(aces[0]) }}</div><div class="rightBar" style="width: {{100-getPercentage(aces)}}%;">{{ nonzero(aces[1]) }}</div>
 		</div>
-		<div class="col-md-3 leftt hidden-xs">
+		<div class="col-md-3 left hidden-xs">
 			<div>ACES</div>
 		</div>
 	</div>
@@ -80,7 +81,7 @@
 		<div class="col-md-6">
 			<div class="leftBar" style="width: {{getPercentage(df)}}%;">{{ nonzero(df[0]) }}</div><div class="rightBar" style="width: {{100-getPercentage(df)}}%;">{{ nonzero(df[1]) }}</div>
 		</div>
-		<div class="col-md-3 leftt hidden-xs">
+		<div class="col-md-3 left hidden-xs">
 			<div>DOUBLE FAULTS</div>
 		</div>
 	</div>
@@ -108,7 +109,7 @@
 	</div>
 </div>
 
-
+</div>
 
 <!--
 			<div>DOUBLE FAULTS</div>
